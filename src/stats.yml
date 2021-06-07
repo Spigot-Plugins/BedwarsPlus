@@ -1,0 +1,7 @@
+# EDITABLE CONFIGURATION
+points:
+  kill: 5
+  win: 100
+  death: -3
+# DO NOT EDIT FROM HERE, TO AVOID CONFIGURATION PROBLEMS
+stats:

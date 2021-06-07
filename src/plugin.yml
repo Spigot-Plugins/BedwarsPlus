@@ -1,0 +1,13 @@
+name: Bedwars-Plus
+version: 0.1
+author: unldenis
+main: me.unldenis.bedwars.Bedwars
+softdepend: [Multiverse-Core]
+api-version: 1.16
+commands:
+  bw:
+    description: /bw help
+  bwextra:
+    description: /bwextra npc help
+  clan:
+    description: /clan help

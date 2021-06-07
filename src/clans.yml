@@ -1,0 +1,8 @@
+points:
+  win: 25
+  lose: -5
+config:
+  update-armorstand: 20
+
+clans:
+armorstand:

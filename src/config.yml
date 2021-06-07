@@ -1,0 +1,7 @@
+# The mapvoting system is automatic thanks to which you can switch from the tradition to the mapvoting system only from the config. 
+# Our algorithm finds and matches matches that have the same number of players per team with the number of teams.
+# The arenas that have been matched MUST have the same colors as the teams for the plugin working correctly.
+map-voting: false
+
+# This matchmaking system is used to ensure the balance of games. 
+matchmaking: true
