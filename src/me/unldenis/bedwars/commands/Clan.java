@@ -182,11 +182,20 @@ public class Clan implements CommandExecutor
                 }
                 else if (args[0].equalsIgnoreCase("list")) {
                     final me.unldenis.bedwars.object.clans.Clan cl = this.main.getClanManager().getClan(player);
-                    if (!this.clanExist(cl.getNameClan())) {
+                    if (cl==null) {
                         player.sendMessage(ChatColor.RED + this.main.getMessagesData().getConfig().getString("clan.dont-have-clan"));
                         return true;
                     }
                     cl.listMembers(player);
+                    return true;
+                }
+                else if (args[0].equalsIgnoreCase("leave")) {
+                    final me.unldenis.bedwars.object.clans.Clan cl = this.main.getClanManager().getClan(player);
+                    if (cl==null) {
+                        player.sendMessage(ChatColor.RED + this.main.getMessagesData().getConfig().getString("clan.dont-have-clan"));
+                        return true;
+                    }
+                    cl.removePlayer(player);
                     return true;
                 }
             }
@@ -203,6 +212,7 @@ public class Clan implements CommandExecutor
         player.sendMessage(ChatColor.DARK_GRAY + "/clan accept");
         player.sendMessage(ChatColor.DARK_GRAY + "/clan top <numberTop>");
         player.sendMessage(ChatColor.DARK_GRAY + "/clan list");
+        player.sendMessage(ChatColor.DARK_GRAY + "/clan leave");
         if (player.hasPermission("clan.admin")) {
             player.sendMessage(ChatColor.GOLD + "Admin");
             player.sendMessage(ChatColor.DARK_GRAY + "/clan set <1-2-3>");

@@ -12,6 +12,7 @@ clan:
   player-request: "Request to join clan %clan by %player"
   player-joined: "%player joined the clan!"
   player-kicked: "%player was kicked from the clan, Bye bye"
+  player-left: "%player left the clan"
 inventories:
   choose-game: "Choose Game"
   click-join: "Click to join game"

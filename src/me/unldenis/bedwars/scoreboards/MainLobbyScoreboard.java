@@ -63,8 +63,8 @@ public class MainLobbyScoreboard
                     this.myScr.replaceScore(this.obj, 3, "Place: " + ChatColor.GREEN + "#" + (MainLobbyScoreboard.this.main.getClanManager().sortClans().indexOf(cl) + 1));
                 }
                 else {
-                    this.myScr.replaceScore(this.obj, 6, "Clan: " + ChatColor.GREEN + "\u1f6aB");
-                    this.myScr.replaceScore(this.obj, 3, "Place: " + ChatColor.GREEN + "\u1f6aB");
+                    this.myScr.replaceScore(this.obj, 6, "Clan: " + ChatColor.GREEN + "\u274C");
+                    this.myScr.replaceScore(this.obj, 3, "Place: " + ChatColor.GREEN + "\u274C");
                 }
                 this.myScr.replaceScore(this.obj, 5, "Players: " + ChatColor.GREEN + Bukkit.getOnlinePlayers().size());
                 if (this.count == 10) {

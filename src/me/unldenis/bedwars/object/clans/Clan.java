@@ -103,6 +103,22 @@ public class Clan
         this.sendMessage(s);
         this.players.remove(player.getUniqueId());
     }
+   
+    public void removePlayer(final Player player) {
+    	this.main.getClanManager().setClan(player, null);
+    	
+        final List<String> l = (List<String>)this.main.getClansData().getConfig().getStringList("clans." + this.nameClan + ".members");
+        l.remove(player.getUniqueId().toString());
+        this.main.getClansData().getConfig().set("clans." + this.nameClan + ".members", (Object)l);
+        this.main.getClansData().saveConfig();
+        
+        String s = this.main.getMessagesData().getConfig().getString("clan.player-left");
+        s = s.replace("%player", player.getDisplayName());
+        this.sendMessage(s);
+        
+        this.players.remove(player.getUniqueId());
+
+    }
     
     public void sendMessage(final String msg) {
         for (final Player p : this.getOnlinePlayers()) {
