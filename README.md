@@ -8,7 +8,7 @@ The plugin is developed on spigot 1.16.5, at the moment I don't think to impleme
 <br>
 <br>
 <h2>Major Features</h2>
-<img src="https://user-images.githubusercontent.com/80055679/121052955-26480d00-c7bb-11eb-8fc2-5f77836e429e.gif">
+<img src="https://user-images.githubusercontent.com/80055679/121052955-26480d00-c7bb-11eb-8fc2-5f77836e429e.gif" width="75%">
 <ul>
   <li>Advanced mapvoting system</li>
   <li>Clans</li>
