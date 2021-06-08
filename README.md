@@ -8,6 +8,7 @@ The plugin is developed on spigot 1.16.5, at the moment I don't think to impleme
 <br>
 <br>
 <h2>Major Features</h2>
+<img src="https://user-images.githubusercontent.com/80055679/121052955-26480d00-c7bb-11eb-8fc2-5f77836e429e.gif">
 <ul>
   <li>Advanced mapvoting system</li>
   <li>Clans</li>
@@ -18,7 +19,7 @@ The plugin is developed on spigot 1.16.5, at the moment I don't think to impleme
   <li>Hologram</li>
   <li>Stats</li>
 </ul>
-The page with all the features can be found <a href="https://www.spigotmc.org/members/unlegit_denis.387252/">here</a>.
+The page with all the features can be found <a href="https://www.spigotmc.org/resources/bedwarsplus-mapvoting-clans-ranking.93099/">here</a>.
 <br>
 <br>
 <h2>Contributing</h2>
