@@ -37,6 +37,7 @@ game:
   team-player-full: "This team is full"
   team-player-joined: "You joined team %team"
   team-private-clan: "You cannot join this team"
+  no-matches-available: "There are no games available."
 shop:
   can-not-buy: "You don't have enough resources to buy this item"
 scoreboards:

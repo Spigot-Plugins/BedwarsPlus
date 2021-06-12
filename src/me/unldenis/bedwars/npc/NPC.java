@@ -41,16 +41,12 @@ import java.util.List;
 
 public class NPC
 {
-    private static List<NPC> NPC;
+    private static List<NPC> NPC = new ArrayList<NPC>();
     private EntityPlayer npc;
     private GameProfile gameProfile;
     private String name;
     private String skin;
-    
-    static {
-        me.unldenis.bedwars.npc.NPC.NPC = new ArrayList<NPC>();
-    }
-    
+        
     public NPC(final Bedwars main, final String name, final Location location, final String skin) {
         me.unldenis.bedwars.npc.NPC.NPC.add(this);
         this.name = name;
@@ -120,7 +116,7 @@ public class NPC
             e.printStackTrace();
         }
         final DataWatcher watcher = this.npc.getDataWatcher();
-        watcher.set(new DataWatcherObject(16, DataWatcherRegistry.a), (Object)127);
+        watcher.set(new DataWatcherObject<>(16, DataWatcherRegistry.a), (byte)127);
         final PacketPlayOutEntityMetadata packet = new PacketPlayOutEntityMetadata(this.npc.getId(), watcher, true);
         ((CraftPlayer)player).getHandle().playerConnection.sendPacket(packet);
         this.addNPCPacket(player);

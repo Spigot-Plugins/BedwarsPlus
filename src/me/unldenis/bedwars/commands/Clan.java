@@ -150,7 +150,7 @@ public class Clan implements CommandExecutor
                             stand.setLeggings(new ItemStack(Material.LEATHER_LEGGINGS));
                             stand.setBoots(new ItemStack(Material.LEATHER_BOOTS));
                             break;
-                        }
+                        }                      
                     }
                     return true;
                 }

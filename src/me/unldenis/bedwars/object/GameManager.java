@@ -95,6 +95,7 @@ public class GameManager
     }
     
     public Game getRandomGame(final GamePlayer gamePlayer) {
+    	if(games.isEmpty()) return null;
         if (this.main.getConfigData().getConfig().getBoolean("matchmaking")) {
             final Game game = this.games.stream().sorted((o1, o2) -> o1.getMedPlayersScore(gamePlayer).compareTo(o2.getMedPlayersScore(gamePlayer))).findFirst().get();
             return game;

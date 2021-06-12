@@ -5,6 +5,8 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.EventHandler;
 import org.bukkit.entity.Player;
 import org.bukkit.ChatColor;
+
+import me.unldenis.bedwars.object.Game;
 import me.unldenis.bedwars.object.GamePlayer;
 import me.unldenis.bedwars.npc.RightClickNPC;
 import me.unldenis.bedwars.Bedwars;
@@ -23,7 +25,13 @@ public class ClickNPC implements Listener
         final Player player = event.getPlayer();
         if (event.getNPC().getName().equals("Random")) {
             final GamePlayer gm = new GamePlayer(player, this.main);
-            this.main.getGameManager().getRandomGame(gm).joinGame(gm);
+            Game game =  this.main.getGameManager().getRandomGame(gm);
+            if(game==null) {
+                String s = this.main.getMessagesData().getConfig().getString("game.no-matches-available");
+                player.sendMessage(ChatColor.RED + s);
+            	return;
+            }
+            game.joinGame(gm);
             return;
         }
         if (event.getNPC().getName().equals("Squad")) {
